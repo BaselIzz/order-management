@@ -5,8 +5,9 @@ Final Project OF Spring Boot
 # Docker 
 
 //First we need to  Make image to mysql 
+```bash
 docker pull mysql:8
-
+```
 //to l now the image name  then verify if the Sql is exist 
 docker images 
 
