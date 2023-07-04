@@ -1,5 +1,5 @@
 # order-management
-Final Project OF Spring Boot
+Final Project WEB Service 
 
 
 # Docker 
