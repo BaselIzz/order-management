@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  my-java-app:
+    image: backend
+    container_name: backend_api
+    depends_on:
+      - mysql
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/jwt_security?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SERVER_PORT=8080
+    ports:
+       - "8081:8080"
+
+  mysql:
+    image: mysql
+    container_name: mysql
+    environment:
+      - "MYSQL_DATABASE=jwt_security"
+      - "MYSQL_PASSWORD=root"
+      - "MYSQL_ROOT_PASSWORD=root"
+
+    ports:
+        - "127.0.0.1:3307:3306"
+    volumes:
+      - D:\2nd semster 2022_2023\webServeice\mySqlvolume:/var/lib/mysql

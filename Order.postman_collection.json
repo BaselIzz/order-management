@@ -1,0 +1,444 @@
+{
+	"info": {
+		"_postman_id": "2b563569-b8bb-4dda-b859-399ae1c86b57",
+		"name": "Order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28184448"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYXNlbGl6ejI0MSIsImlhdCI6MTY4ODM0MTE0OCwiZXhwIjoxNjg4OTQ1OTQ4fQ.R2wHoUbWlBGtBxx8jiSuYcMnGr8Yo2UTvRZZHonx9D3JqyD482Pt54tRFFSV1Fm_NHa_QMfcfwP5D3dql-npvg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n    \"orderDate\": \"2023-07-02\",\r\n    \"customerId\": 1,\r\n    \"productIds\": [6]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n    \"orderDate\": \"2023-07-02\",\r\n    \"customerId\": 1,\r\n    \"productIds\": [6]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/hal+json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Jul 2023 23:39:19 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 7,\n    \"orderDate\": \"2023-07-02\",\n    \"customerId\": 1,\n    \"productIds\": null,\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://localhost:8080/api/v1/orders/7\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "GetAll",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYXNlbGl6ejI0MSIsImlhdCI6MTY4ODM0MTE0OCwiZXhwIjoxNjg4OTQ1OTQ4fQ.R2wHoUbWlBGtBxx8jiSuYcMnGr8Yo2UTvRZZHonx9D3JqyD482Pt54tRFFSV1Fm_NHa_QMfcfwP5D3dql-npvg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetAll",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/hal+json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Jul 2023 23:39:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_embedded\": {\n        \"orderDTOList\": [\n            {\n                \"id\": 2,\n                \"orderDate\": \"2023-07-02\",\n                \"customerId\": 1,\n                \"productIds\": null,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"http://localhost:8080/api/v1/orders/2\"\n                    },\n                    \"update\": {\n                        \"href\": \"http://localhost:8080/api/v1/orders/2\"\n                    },\n                    \"delete\": {\n                        \"href\": \"http://localhost:8080/api/v1/orders/2\"\n                    }\n                }\n            },\n            {\n                \"id\": 3,\n                \"orderDate\": \"2023-07-02\",\n                \"customerId\": 1,\n                \"productIds\": null,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"http://localhost:8080/api/v1/orders/3\"\n                    },\n                    \"update\": {\n                        \"href\": \"http://localhost:8080/api/v1/orders/3\"\n                    },\n                    \"delete\": {\n                        \"href\": \"http://localhost:8080/api/v1/orders/3\"\n                    }\n                }\n            },\n            {\n                \"id\": 4,\n                \"orderDate\": \"2023-07-02\",\n                \"customerId\": 1,\n                \"productIds\": null,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"http://localhost:8080/api/v1/orders/4\"\n                    },\n                    \"update\": {\n                        \"href\": \"http://localhost:8080/api/v1/orders/4\"\n                    },\n                    \"delete\": {\n                        \"href\": \"http://localhost:8080/api/v1/orders/4\"\n                    }\n                }\n            },\n            {\n                \"id\": 7,\n                \"orderDate\": \"2023-07-02\",\n                \"customerId\": 1,\n                \"productIds\": null,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"http://localhost:8080/api/v1/orders/7\"\n                    },\n                    \"update\": {\n                        \"href\": \"http://localhost:8080/api/v1/orders/7\"\n                    },\n                    \"delete\": {\n                        \"href\": \"http://localhost:8080/api/v1/orders/7\"\n                    }\n                }\n            }\n        ]\n    },\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://localhost:8080/api/v1/orders\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYXNlbGl6ejI0MSIsImlhdCI6MTY4ODM0MTE0OCwiZXhwIjoxNjg4OTQ1OTQ4fQ.R2wHoUbWlBGtBxx8jiSuYcMnGr8Yo2UTvRZZHonx9D3JqyD482Pt54tRFFSV1Fm_NHa_QMfcfwP5D3dql-npvg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/orders/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"7"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/orders/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"7"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Jul 2023 23:40:25 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Order deleted successfully."
+				}
+			]
+		},
+		{
+			"name": "GetByID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYXNlbGl6ejI0MSIsImlhdCI6MTY4ODM0MTE0OCwiZXhwIjoxNjg4OTQ1OTQ4fQ.R2wHoUbWlBGtBxx8jiSuYcMnGr8Yo2UTvRZZHonx9D3JqyD482Pt54tRFFSV1Fm_NHa_QMfcfwP5D3dql-npvg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/orders/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetByID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/orders/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/hal+json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Jul 2023 23:41:58 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"orderDate\": \"2023-07-02\",\n    \"customerId\": 1,\n    \"productIds\": null,\n    \"_links\": {\n        \"self\": {\n            \"href\": \"http://localhost:8080/api/v1/orders/2\"\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}
